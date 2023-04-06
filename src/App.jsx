@@ -5,6 +5,7 @@ import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import Home from "./pages/home/Home"
 import Events from "./pages/events/Events"
+import Jobs from "./pages/jobs/Jobs"
 
 import {Routes, Route } from "react-router-dom"
 import CalendarCourses from "./pages/calendar/CalendarCourses";
@@ -20,6 +21,7 @@ function App() {
               <Route path="/events" element={<Events/>} />
               <Route path="/courses" element={<Courses/>} />
               <Route path="/calendar" element={<CalendarCourses/>} />
+              <Route path="/jobs" element={<Jobs/>} />
           </Routes>
         <Footer/>
         </QueryClientProvider>
