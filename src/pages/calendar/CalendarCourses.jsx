@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import moment from "moment/moment";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css"; // if using DnD
+import "./calendarCourses.css";
 const localizer = momentLocalizer(moment);
 
 const handleSelector = (events, setCalendarEvents) => {
@@ -52,7 +53,7 @@ const CalendarCourses = () => {
   }
 
   return (
-    <div>
+    <section className="calendar">
       <h1>allahouma ini saem</h1>
       <select
         id="eventSelector"
@@ -72,7 +73,7 @@ const CalendarCourses = () => {
         endAccessor="end"
         style={{ height: 500 }}
       />
-    </div>
+    </section>
   );
 };
 

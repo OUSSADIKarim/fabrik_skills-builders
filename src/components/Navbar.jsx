@@ -1,38 +1,43 @@
-import React from 'react'
-import  {useState, useEffect} from 'react'
+import React from "react";
+import Logo from "../assets/logo.png"
+import menu from "../assets/menu.png"
+import close from "../assets/close.png"
 
-import "../components/NavbarStyles.css"
-export default function Navbar() {
-    const [toggleMenu, setToggleMenu] = useState(false)
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+import "../components/NavbarStyles.css";
 
-    useEffect(() => {
 
-        const changeWidth = () => {
-          setScreenWidth(window.innerWidth);
-        }
-    
-       
-        return () => {
-            window.addEventListener('resize', changeWidth)
-            window.removeEventListener('resize', changeWidth)
-        }
-    
-      }, [])
-      const toggleNav = () => {
-        setToggleMenu(!toggleMenu)
-      }
+const Navbar = () => {
+  const handleMenue = () => {
+  const menuBtn = document.querySelector(".menue-btn");
+  const navbar = document.querySelector(".navbar");
+  menuBtn.classList.toggle("active");
+  navbar.classList.toggle("active");
+  }
+  // const menuBtn = document.querySelector(".menue-btn");
+  // const navbar = document.querySelector(".navbar");
+  // console.log(menuBtn);
+  // menuBtn.addEventListener("click", () => {
+  //   menuBtn.classList.toggle("active");
+  //   navbar.classList.toggle("active");
+  // })
   return (
-    <nav>
-      {(toggleMenu || screenWidth > 500) && (
-      <ul className="list">
-      <li className="items">Home</li>
-      <li className="items">Services</li>
-      <li className="items">Contact</li>
-    </ul>
-      )}
+    <header>
+      <a href="" className="logo"><img src={Logo} /></a>
+      <div className="menue-btn" onClick={handleMenue}><img src={menu} alt="" /> </div>
+      <div className="navbar">
+        <div className="navbar-items">
+          <a href="index.html">HOMME</a>
+          <a href="blog.html">BLOG</a>
+          <a href="destination.html">DESTINATIONS</a>
+          <a href="notfound.html">CONTACT</a>
 
-      <button onClick={toggleNav} className="btn">BTN</button>
-    </nav>
+        </div>
+      </div>
+    </header>
   )
 }
+
+export default Navbar
+
+
+

@@ -1,4 +1,6 @@
 import React from "react";
+import Logo from "../assets/logo.png" ;
+
 import {
   Box,
   Container,
@@ -14,10 +16,16 @@ const Footer = () => {
       <h1 style={{ color: "green", 
                    textAlign: "center", 
                    marginTop: "-50px" }}>
-        lorem ipsum dolor lorem ipsum dolor 
+        
       </h1>
       <Container>
         <Row>
+        <Column>
+            
+               <img src={Logo} /><br />
+               <p>Lorem Ipsum is simply dummy text of the printing and 
+                typesetting industry  typesetting industry  </p>
+          </Column>
           <Column>
             <Heading>About Us</Heading>
             <FooterLink href="#">Aim</FooterLink>
