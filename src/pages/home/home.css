@@ -5,6 +5,19 @@
     padding-inline: 2rem;
     background-color: #FDF8EE;
 }
+.container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+
+.content, .hero-img{
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
 .content  {
    display: flex;
    justify-content: center;
@@ -12,11 +25,12 @@
    flex-direction: column;
 }
 .hero-img {
-    width: 50%;
+    width: 80%;
+    display: block;
 }
 
 .hero-img img{
-     width: 80%;
+     width: 400px;
 }
 
 .search-bar{
