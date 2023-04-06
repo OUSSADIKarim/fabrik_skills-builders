@@ -53,14 +53,15 @@ const CalendarCourses = () => {
   }
 
   return (
-    <section className="calendar">
-      <h1>allahouma ini saem</h1>
+    <section className="calendar ">
+      <h1>Calendar of events</h1>
       <select
         id="eventSelector"
         onChange={() => {
           handleSelector(events, setCalendarEvents);
         }}
       >
+        <option defaultChecked>Choose An Event</option>
         {events.map((event) => {
           return <option value={event.id}>{event.title}</option>;
         })}
@@ -71,7 +72,6 @@ const CalendarCourses = () => {
         events={calendarEvents}
         startAccessor="start"
         endAccessor="end"
-        style={{ height: 500 }}
       />
     </section>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
 import Caroussel from "./../../components/caroussel/Caroussel";
+import "./courses.css";
 
 const Courses = () => {
   const { data, isLoading } = useQuery(["courses"], async () => {
@@ -14,7 +15,12 @@ const Courses = () => {
     return <h1>Loading...</h1>;
   }
 
-  return <Caroussel data={data?.courses} />;
+  return (
+    <main className="main">
+      <h1>Our Courses</h1>
+      <Caroussel data={data?.courses} />
+    </main>
+  );
 };
 
 export default Courses;

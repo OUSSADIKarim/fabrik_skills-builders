@@ -14,7 +14,8 @@ const Jobs = () => {
     return <h1>Loading...</h1>;
   }
   return (
-    <div>
+    <div className="main">
+      <h1>Job Offers</h1>
       <Caroussel data={data?.jobs} />
     </div>
   );

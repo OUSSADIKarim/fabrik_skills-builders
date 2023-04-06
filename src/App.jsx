@@ -3,13 +3,12 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Courses from "./pages/courses/Courses";
 import Navbar from "./components/Navbar";
 import Home from "./pages/home/Home";
-import Footer from "./components/Footer"
-import Events from "./pages/events/Events"
-import Jobs from "./pages/jobs/Jobs"
+import Footer from "./components/Footer";
+import Events from "./pages/events/Events";
+import Jobs from "./pages/jobs/Jobs";
 
 import { Routes, Route } from "react-router-dom";
 import CalendarCourses from "./pages/calendar/CalendarCourses";
-
 
 function App() {
   const client = new QueryClient();
@@ -28,7 +27,6 @@ function App() {
       </QueryClientProvider>
     </>
   );
-     
 }
 
 export default App;
