@@ -57,7 +57,7 @@ const CalendarCourses = () => {
       <select
         id="eventSelector"
         onChange={() => {
-          handleSelector(events, calendar, setCalendarEvents);
+          handleSelector(events, setCalendarEvents);
         }}
       >
         {events.map((event) => {
