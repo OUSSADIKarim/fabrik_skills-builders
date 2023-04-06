@@ -1,4 +1,27 @@
 .calendar {
-  margin-block: 5rem;
-  height: 100vh;
+  margin-inline: auto;
+  margin-top: 10rem;
+  width: 80%;
+  aspect-ratio: 1;
+}
+
+.calendar h1 {
+  text-align: center;
+}
+
+.calendar select {
+  display: block;
+  margin-block: 2rem;
+  margin-inline: auto;
+  background-color: #3174ad;
+  color: #fff;
+  height: 25px;
+  border-radius: 20px;
+}
+
+.calendar button:not(.rbc-button-link) {
+  cursor: pointer;
+  background-color: #3174ad;
+  color: #fff;
+  border-radius: 20px;
 }

@@ -4,7 +4,7 @@ import Axios from "axios";
 import Caroussel from "./../../components/caroussel/Caroussel";
 
 const Events = () => {
-  const { data, isLoading } = useQuery(["courses"], async () => {
+  const { data, isLoading } = useQuery(["events"], async () => {
     const res = await Axios.get("../../../data/events.json");
     const data = res.data;
     return data;
@@ -15,7 +15,8 @@ const Events = () => {
   }
 
   return (
-    <div>
+    <div className="main">
+      <h1>Our Events</h1>
       <Caroussel data={data?.events} />
     </div>
   );
